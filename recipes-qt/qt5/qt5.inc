@@ -54,6 +54,7 @@ FILES_${PN}-tools-dbg = " \
 "
 FILES_${PN}-plugins-dbg = " \
     ${OE_QMAKE_PATH_PLUGINS}/*/.debug/* \
+    ${OE_QMAKE_PATH_PLUGINS}/*/*/.debug/* \
 "
 
 # extra packages
@@ -98,6 +99,7 @@ FILES_${PN}-tools = " \
 "
 FILES_${PN}-plugins = " \
     ${OE_QMAKE_PATH_PLUGINS}/*/*${SOLIBSDEV} \
+    ${OE_QMAKE_PATH_PLUGINS}/*/*/*${SOLIBSDEV} \
 "
 FILES_${PN}-mkspecs = "\
     ${OE_QMAKE_PATH_ARCHDATA}/mkspecs \
