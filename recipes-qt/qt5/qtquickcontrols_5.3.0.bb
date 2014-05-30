@@ -1,6 +1,5 @@
 require qt5-5.3.0.inc
 require ${PN}.inc
-QT_MODULE_BRANCH = "5.3.0"
 
 SRCREV = "d1320d78c6653320e33564c1fd64c14b2dd24cee"
 

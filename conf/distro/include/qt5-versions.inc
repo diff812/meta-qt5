@@ -1,7 +1,4 @@
-# Select which version you prefer by defining QT5_VERSION and including this file
-# possible values now "5.2.1", "5.2.1+git%"
-
-QT5_VERSION ?= "5.2.1"
+QT5_VERSION = "5.3.0"
 
 PREFERRED_VERSION_qtbase-native = "${QT5_VERSION}"
 PREFERRED_VERSION_qtbase = "${QT5_VERSION}"
@@ -21,3 +18,8 @@ PREFERRED_VERSION_qttools-native = "${QT5_VERSION}"
 PREFERRED_VERSION_qtwebkit = "${QT5_VERSION}"
 PREFERRED_VERSION_qtwebkit-examples = "${QT5_VERSION}"
 PREFERRED_VERSION_qtxmlpatterns = "${QT5_VERSION}"
+PREFERRED_VERSION_qtlocation = "${QT5_VERSION}"
+PREFERRED_VERSION_qttools = "${QT5_VERSION}"
+PREFERRED_VERSION_qtconnectivity = "${QT5_VERSION}"
+PREFERRED_VERSION_nativesdk-qtbase = "${QT5_VERSION}"
+ 
