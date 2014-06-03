@@ -1,3 +1,7 @@
+## Add the following to your local.conf
+## DISTRO_FEATURES_remove = "x11 wayland"
+## PACKAGECONFIG_append_pn-qtmultimedia = " gstreamer010 "
+
 DESCRIPTION = "A minimal qt5 image without X11"
 
 LICENSE = "MIT"
@@ -49,8 +53,6 @@ IMAGE_INSTALL_append = "\
     imx-test \    
     strace \
 "
-
-PACKAGECONFIG_append_pn-qtmultimedia = " gstreamer010"
 
 inherit core-image
 
