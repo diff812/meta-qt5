@@ -13,6 +13,7 @@ SRC_URI += "\
     file://0004-configureapp-Prefix-default-LIBDIRS-and-INCDIRS-with.patch \
     file://0001-Fix-missing-plugin_types.patch \
     file://0001-Revert-eglfs-Print-the-chosen-config-in-debug-mode.patch \
+    file://0011-Fix-pkgconfig-replacement.patch \
 "
 
 # target specific
