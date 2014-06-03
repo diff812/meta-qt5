@@ -1,32 +1,13 @@
-This layer depends on:
+repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b daisy; repo sync
 
-URI: git://github.com/openembedded/oe-core.git
-branch: master
-revision: HEAD
+cd sources; git clone https://github.com/cetola/meta-qt5.git
 
-URI: git://github.com/openembedded/meta-oe.git
-layers: meta-ruby
-branch: master
-revision: HEAD
+add to bblayers.conf:
+  ${BSPDIR}/sources/meta-openembedded/meta-ruby \
+  ${BSPDIR}/sources/meta-qt5 \
 
-When building stuff like qtdeclarative, qtquick, qtwebkit, make sure that
-you have required PACKAGECONFIG options enabled in qtbase build, see qtbase.inc
-for detail.
+add to local.conf:
+DISTRO_FEATURES_remove = "x11 wayland"
+PACKAGECONFIG_append_pn-qtmultimedia = " gstreamer010 "
 
-Send pull requests to openembedded-devel@lists.openembedded.org with '[meta-qt5]' in the subject'
-
-When sending single patches, please using something like:
-'git send-email -M -1 --to openembedded-devel@lists.openembedded.org --subject-prefix=meta-qt5][PATCH'
-
-You are encouraged to fork the mirror on github[1] to share your
-patches. This is preferred for patch sets consisting of more than one
-patch. Other services like gitorious, repo.or.cz or self hosted setups
-are of course accepted as well, 'git fetch <remote>' works the same on
-all of them. We recommend github because it is free, easy to use, has
-been proven to be reliable and has a really good web GUI.
-
-1. https://github.com/meta-qt5/meta-qt5/
-
-Main layer maintainers:
-  Martin 'JaMa' Jansa <martin.jansa@gmail.com>
-  Otavio Salvador <otavio@ossystems.com.br>
+bitbake wandboard-image-qt5
