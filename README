@@ -11,3 +11,9 @@ DISTRO_FEATURES_remove = "x11 wayland"
 PACKAGECONFIG_append_pn-qtmultimedia = " gstreamer010 "
 
 bitbake wandboard-image-qt5
+
+##IMPORTANT##
+delete this file from meta-fsl-arm:
+meta-fsl-arm/qt5-layer/recipes-qt/qt5/qtmultimedia_%.bbappend 
+
+They are backporting features from qt 5.3.0 that already exist if using this layer.
